@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/schedules")
 public class ScheduleController {
     @Autowired

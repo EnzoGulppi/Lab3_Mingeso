@@ -35,10 +35,32 @@ function Teacher(){
 
     return(
         <>
+        <div style={{ 
+                backgroundImage: 'url("https://assets.eldesconcierto.cl/2022/12/CSQ_2021_09_07_0001-8-1-scaled.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                width: '100vw',
+                height: '100vh',
+                overflow: 'auto',
+                position: 'relative' // Añadido para posicionamiento relativo
+            }}>
             <HeaderTeacher/>
-            <Container className="d-flex justify-content-center align-items-center" style={{ height: '100vh', width: '150vh' }}>
-                <Container style={{ width: '30rem', borderRadius: '15px' }}>
-                    <h1>Ingrese a su facultad:</h1>
+        <Container className="d-flex justify-content-center align-items-center" style={{ 
+            position: 'absolute', // Posición absoluta para superponer
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            height: '100vh', 
+            width: '100vw'
+        }}>
+            <Container style={{ 
+                width: '50rem', 
+                borderRadius: '15px', 
+                backgroundColor: 'rgba(255, 255, 255, 0.8)', // Fondo semitransparente
+                padding: '20px' // Espaciado interior
+            }}>
+                    <h1>Departamentos de Ingenierias USACH:</h1>
                     <Form>
                         <Form.Group className="mb-3">
                         <Form.Label>Carrera</Form.Label>
@@ -63,6 +85,7 @@ function Teacher(){
                     </Form>
                 </Container>
             </Container>
+            </div>
         </>
     );
 }

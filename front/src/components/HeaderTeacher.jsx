@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Navbar, Nav, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-function Header() {
+function HeaderTeacher() {
     const navigate = useNavigate();
 
     const handleLoginClick = () => {
@@ -15,22 +15,20 @@ function Header() {
                 <Navbar.Brand href="/home">
                     <img
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Escudo_USACH.svg/1200px-Escudo_USACH.svg.png"
-                        width="30"
-                        height="30"
+                        width="35"
+                        height="35"
                         className="d-inline-block align-top"
                         alt="Logo de Universidad de Santiago de Chile"
                     />
-                    FING
+                    LOA USACH
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/home">Inicio</Nav.Link>
-                        <Nav.Link href="/subjects">Inscripción asignaturas</Nav.Link>
-                        <Nav.Link href="/curriculum">Malla curricular</Nav.Link>
-                        <Nav.Link href="/schedule">Mi horario</Nav.Link>
-                        <Nav.Link href="/historial">Historial académico</Nav.Link>
-                        <Nav.Link href="/soporte">Ayuda y soporte</Nav.Link>
+                    <Button variant="outline-info" href="/home" className="text-white mx-1">Inicio</Button>
+                    <Button variant="outline-info" href="/enterschedules" className="text-white mx-1">Ingreso Horarios</Button>
+                    <Button variant="outline-info" href="/soporte" className="text-white mx-1">Ayuda y Soporte</Button>
+                        
                     </Nav>
                     <Button variant="outline-light" style={{ borderRadius: '20px' }} onClick={handleLoginClick}>Iniciar sesión</Button>
                 </Navbar.Collapse>
@@ -39,4 +37,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default HeaderTeacher;
